@@ -1,0 +1,34 @@
+.modal{
+    border:thin solid #ccc;
+    padding:16px;
+    width: 75%!important;
+    margin: auto!important;
+    border-radius: 6px;
+    margin-top: -280px!important;
+    position: relative;
+    z-index: 10000;
+    max-width: 450px;
+   
+}
+.modalCont{
+    position: fixed;
+    top:0px;
+    background-color:rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+}
+.modalTitle{
+border-bottom: thin solid gainsboro;
+padding-bottom: 12px;
+font-size: 1.1em;
+}
+.btnCont{
+    margin-top: 14px;
+}
+.btnCont button{
+    width: 52px;
+    height:34px
+}
+.saveBtn{
+    margin-left: 8px;
+}

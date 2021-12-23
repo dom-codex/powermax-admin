@@ -1,0 +1,25 @@
+.tableMain{
+    padding-left: 18px;
+}
+.tableItem{
+    text-align: center;
+    width: 90px;
+    word-wrap: break-word;
+    background-color:rgba(0,0,0,.4) ;
+    padding: 10px;
+}
+.clients{
+    padding-left: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 12px;
+    border-top:thin solid #000;
+    border-bottom: thin solid #000;
+    font-weight: bold;
+    
+}
+.btn{
+    background: none;
+    border: none;
+    color:orange
+}

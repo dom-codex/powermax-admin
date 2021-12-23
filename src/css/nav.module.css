@@ -1,0 +1,22 @@
+.nav{
+    min-height:72px;
+    box-shadow: -1px 0px 5px #000;
+}
+.navMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:72px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.navMain h1{
+    color: orange;
+}
+.navMain button{
+    background: none;
+    border: none;
+}
+.navMain button:hover{
+    color: orangered;
+}
