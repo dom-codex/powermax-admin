@@ -1,0 +1,34 @@
+.container{
+    padding:28px 8px 8px 8px
+}
+.searchcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: thin solid #ccc;
+    padding-bottom: 16px;
+}
+.titleContainer{
+    display: flex;
+}
+.inputContainer{
+    position: relative;
+    height:26px;
+    display: flex;
+}
+.inputContainer input{
+    background-color: #efefef;
+    border: none;
+    height:100%;
+    padding-left: 4px;
+    border-radius: 4px;   
+     outline:none
+
+}
+.inputContainer button{
+    height: 100%;
+    margin-left: 12px;
+    background-color: transparent;
+    border: none;
+}

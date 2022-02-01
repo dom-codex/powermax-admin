@@ -1,22 +1,38 @@
 .nav{
-    min-height:72px;
-    box-shadow: -1px 0px 5px #000;
+    height: 56px;
+    overflow:hidden;
+    box-shadow: 0px 1px 5px rgb(241, 241, 241);
 }
-.navMain{
-    display: flex;
+.container{
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    height:72px;
-    padding-left: 18px;
-    padding-right: 18px;
+    height: 100%;
+    padding-left: var(--padding-8px);
+    padding-right: var(--padding-8px);
 }
-.navMain h1{
-    color: orange;
+.container p{
+    color:var(--text-color);
+    font-weight: bold;
+    font-size: 1.3em;
 }
-.navMain button{
-    background: none;
-    border: none;
+.imageContainer{
+    width: 75px;
+    height: 75px;
 }
-.navMain button:hover{
-    color: orangered;
+.nav img{
+height:100%;
+width: 100%;
+}
+.container button{
+    background:none;
+    border:none
+}
+.menu{
+    display: block;
+}
+@media all and (min-width:960px){
+    .menu{
+        display: none;
+    }
 }

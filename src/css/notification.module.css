@@ -1,0 +1,52 @@
+.container{
+    background-color: #fff; 
+    box-shadow: 0px 0px 8px #ccc; 
+    border-radius: 6px;
+    padding:18px
+}
+.rows{
+    max-height: 260px;
+    overflow-y: scroll;
+}
+.cardname{
+    display: flex;
+    height: 100%;
+    padding: 18px 12px 12px 12px;
+}
+.timeContainer{
+    width: 19%;
+    height: 70px;
+} 
+.time{
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0.2);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.time p:nth-child(1){
+    font-size: .8rem;
+}
+.time p:nth-child(2){
+    font-weight: bold;
+}
+.textContainer{
+    width: 79%;
+    margin-left: 12px;
+    padding-right: 6px;
+    max-height: 70px;
+    overflow-y: scroll;
+}
+.textContainer h2{
+    font-size: 1em;
+}
+.textContainer p{
+    font-size: .85em;
+    max-width: 320px;
+}
+.cardname p{
+    word-break: break-all;
+}

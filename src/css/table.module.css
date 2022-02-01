@@ -1,0 +1,25 @@
+.tableContainer{
+    overflow-x: scroll;
+    min-height: var(--card-height);
+}
+.table{
+    width: 100%;   
+     border-collapse: collapse;
+}
+.table td{
+    padding: 16px;
+}
+.table tr td, .table tr th{
+    text-align: center;
+    min-width: 120px;
+    max-width: 280px;
+    word-wrap: break-word;
+}
+.table tbody tr:nth-child(odd){
+    background-color:rgba(255, 249, 197, 0.566);;
+}
+.trname{
+    text-decoration: underline;
+    cursor: pointer;
+    color:#0d0464;
+}

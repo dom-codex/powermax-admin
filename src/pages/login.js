@@ -1,54 +1,40 @@
-import React,{useState} from "react"
+import React, { useState } from "react"
 import styles from "../css/login.module.css"
-import {saveData} from "../utils/storage"
-import {useNavigate} from "react-router-dom"
-const loginHandler = async(email,Password,navigate)=>{
-//VALIDATE PASSWORD
-if(email.length<=0)return alert("invalid email")
-if(Password.length<=0)return alert("invalid password")
-//SEND LOGIN
-const response = await fetch(`${process.env.REACT_APP_BACKEND}/admin/auth/login`,{
-    method:"POST",
-    headers:{
-        "content-type":"application/json"
-    },
-    body:JSON.stringify({
-        email:email,
-        password:Password
-    })
-})
-//CHECK STATUS
-const status  = response.status
+import { loginAdmin } from "../utils/login"
+import { useNavigate } from "react-router-dom"
+import { saveData } from "../utils/storage"
 
-if(status>202)return alert("An error occurred try again")
-const body = await response.json()
-//Save to local storage
-saveData(body)
-//NAVIGATE TO MAIN MENU PAGE
-navigate("/dashboard")
-}
-const LoginPage = (props)=>{
+const Login = props => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [loading, setLoader] = useState(false)
     const navigate = useNavigate()
-    const [email,setEmail] = useState("")
-    const [password,setPassword] = useState("")
-return <section>
-    <div className={styles.loginMain} >
-        <div className={styles.loginHeader}>
-            <h1>POWERMAX</h1>
-            <small className={styles.small}>ADMIN</small>
-        </div>
-        <div className={styles.formCont} >
-            
-            <input onInput={(e)=>setEmail(e.target.value)} value={email} required type={"email"} className={styles.input} placeholder="Email"/>
-            <br/>
-            <input onInput={(e)=>setPassword(e.target.value)} value={password} type={"password"} className={styles.input} placeholder="password"/>
-            
-            <div className={styles.btnCont}>
-                <button type="submit" className={styles.btn} onClick={()=>loginHandler(email,password,navigate)}>Login</button>
+    return <section className={styles.section}>
+        <div>
+            <div className={styles.title}>
+                <h2>POWERMAX</h2>
+                <h2>ADMIN</h2>
             </div>
-            
+            <div className={styles.container}>
+                <div className={styles.formCard}>
+
+                    <label>Email</label>
+                    <input type={"email"} placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <label>Password</label>
+                    <input type={"password"} placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <div className={styles.btnCont}>
+                        <button onClick={() => login(email, password, setLoader, navigate)}>Login</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 }
-export default LoginPage
+export default Login
+const login = async (email, password, setLoader, navigate) => {
+    const response = await loginAdmin(email, password, setLoader)
+    if (response.canLogin) {
+        saveData(response)
+        navigate("/dashboard")
+    }
+}

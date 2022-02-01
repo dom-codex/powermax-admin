@@ -1,0 +1,39 @@
+.dashboard{
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 24px;
+}
+.heading{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.heading h1{
+    font-size: 2em;
+}
+.card{
+    margin-bottom: 12px;
+}
+@media all and (min-width:960px){
+    .heading{
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+    .firstContainer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .card{
+        width: 49%;
+        margin-bottom: 32px;
+    }
+    .dashboard{
+    padding-right: 32px;
+    padding-left: 32px;
+    }
+    .w{
+        margin: auto;
+        width:75%;
+        max-width: 820px;
+        background-color: violet;
+    }
+}

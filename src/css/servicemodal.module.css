@@ -1,0 +1,77 @@
+.modalForm{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+}
+.mainForm{
+    background-color: #fff;
+    width:85%;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    min-height: 280px;
+    padding: 32px 16px 24px 16px;
+}
+.header{
+   padding-bottom: 22px;
+   border-bottom: thin solid #ccc;
+   margin-bottom: 12px; 
+}
+.header h1{
+    font-size: 1.65em;
+    color: var(--text-color);
+}
+.modalForm label{
+    font-size:.8em;
+    margin-left: 4px;
+}
+.modalForm select, .modalForm input{
+    display:block;
+    width: 100%;
+    height:42px;
+    margin-bottom:8px;
+    border:none;
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    padding-left: 4px;
+    color: var(--text-color);
+}
+.modalForm ul{
+    list-style-type: none;
+}
+.benefitInput{
+    position: relative;
+}
+.benefitInput input{
+    padding-right: 50px;
+}
+.benefitInput button{
+    position:absolute;
+    top: 0;
+    right: 0;
+    height: 42px;
+    width: 48px;
+}
+.createBtnCont,.closeBtn{
+    margin-top:18px;
+}
+.closeBtn{
+    text-align:right;
+}
+.createBtnCont button,.closeBtn button{
+    width:100%;
+    height: 28px;
+    border:none;
+    border-radius: 12px;
+    background-color: var(--text-color);
+    color: #fff;
+    cursor: pointer;
+}
+.closeBtn button{
+   width: 25%;
+   background: none;
+   color: var(--text-color);
+   font-weight: bold;
+   border:2px solid var(--text-color)
+} 

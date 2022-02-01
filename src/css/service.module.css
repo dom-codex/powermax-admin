@@ -1,0 +1,118 @@
+.container{
+    padding:2em 18px 18px 18px
+}
+.container h1{
+    font-size: 2em;
+}
+.tabBtns{
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 6px;
+}
+.tabBtns button{
+    margin-right:12px;
+    border:none;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: .65em;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgb(248, 224, 9);
+}
+.selectedType{
+    background-color: rgba(255, 166, 0, 0.466);
+    font-weight: bold;
+}
+.cardContainer{
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 12px;
+    padding:16px 12px;
+}
+.cardCont{
+    width: 60%;
+    box-shadow: 0px 0px 6px #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-bottom:24px;
+    min-height: 320px;
+    min-width:260px;
+    max-width: 320px;
+}
+.cardContainer img{
+    height:50px;
+    width:50px
+}
+.cardHeader{
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 8px 12px;
+    align-items: flex-end;
+}
+.cardImg{
+    background-color: var(--bg-color);
+    margin-top: 12px;
+    border-radius: 6px;
+}
+.planName{
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.body{
+    padding:18px 18px 0px 18px;
+    color:var(--text-color)
+}
+.body h2{
+    margin-bottom: 12px;
+}
+.benefit{
+    font-size: .85em;
+}
+.editBtnCont button{
+    background-color: var(--text-color);
+    color:#fff;
+    border:none;
+    width: 100%;
+    border-radius: 28px;
+    height: 28px;
+    margin-top: 18px;
+}
+button.deleteBtn{
+    background-color: transparent;
+    color:#000;
+}
+button.deleteBtn:hover,button.deleteBtn:active{
+    border:1px solid var(--text-color)
+}
+
+/*STYLES FOR FIRST CARD*/
+.addService{
+    box-shadow: none;
+    border:2px dashed #ccc;
+    display:grid;
+    place-items: center;
+    cursor: pointer;
+    min-height: 50px;
+    padding: 0;
+}
+.addService:hover, .addService:focus{
+    border-color: orange;
+    background-color: var(--bg-color);
+}
+/*MEDIA QUERY STYLES*/
+@media all and (min-width:780px){
+    .cardContainer{
+        display: flex;
+        overflow-x: scroll;
+    }
+    .cardCont{
+        margin-right: 24px;
+        margin-left: 4px;
+    }
+    .addService{
+        min-height: 320px;
+    }
+}
